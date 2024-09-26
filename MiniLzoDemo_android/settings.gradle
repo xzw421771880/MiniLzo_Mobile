@@ -1,0 +1,3 @@
+include ':minilzo'
+include ':app'
+rootProject.name = "MiniLzoDemo_xzw"
