@@ -44,12 +44,6 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved){
     const JNINativeMethod method[]={
             {"lzo_compress","([B)[B",(void*)compress},
             {"lzo_decompress","([B)[B",(void*)decompress},
-//            {"sub","(II)I",(void*)subNumber},
-//            {"mul","(II)I",(void*)mulNumber},
-//            {"div","(II)I",(void*)divNumber},
-//            {"ad","(II)I",(void*)adNumberr}
-
-
     };
 
     //找到对应的JNITools类
