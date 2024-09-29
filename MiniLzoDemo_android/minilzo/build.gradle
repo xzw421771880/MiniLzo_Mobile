@@ -47,3 +47,17 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+task clearJar() {
+    delete 'minilzo_xzw_1.0.jar' //删除已经存在的jar包，如果有的话
+}
+
+
+task makeJar(type: Copy) {
+    from('build/intermediates/aar_main_jar/debug/')//从该目录下加载要打包的文件，注意文件夹名称有可能为default，也可能是release，自己看一下
+    into('build/libs/')//jar包的保存目录
+    include('classes.jar')//设置过滤，只打包classes文件
+    rename('classes.jar', 'minilzo_xzw_1.0.jar')//重命名，SlidingMenuHbh.jar 名字自己随便起
+}
+
+makeJar.dependsOn(clearJar,build)

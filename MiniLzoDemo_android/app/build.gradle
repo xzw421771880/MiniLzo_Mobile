@@ -14,6 +14,19 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        ndk{
+//            moduleName "jnidemo"
+//            abiFilters 'x86','armeabi-v7a','arm64-v8a'
+//            ldLibs "log"
+//        }
+    }
+
+    sourceSets {
+        main {
+//            jniLibs.srcDirs = ['src/main/jni']
+            jniLibs.srcDirs = ['libs']
+        }
     }
 
     buildTypes {
@@ -26,6 +39,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
@@ -35,9 +49,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.navigation:navigation-fragment:2.2.2'
     implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation files('libs/minilzo_xzw_1.0.jar')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation project(path: ':minilzo')
+//    compileOnly fileTree(dir: "libs", include: ["minilzo-release.aar"])
+//    implementation project(path: ':minilzo')
 }

@@ -1,0 +1,16 @@
+Executable : /Users/xiaozhongwang/Library/Android/sdk/ndk/21.1.6352462/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/xiaozhongwang/Desktop/文件汇总/代码/git/MiniLzo_Mobile/MiniLzoDemo_android/minilzo/src/main/jni/Android.mk
+APP_ABI=armeabi-v7a
+NDK_ALL_ABIS=armeabi-v7a
+NDK_DEBUG=0
+APP_PLATFORM=android-16
+NDK_OUT=/Users/xiaozhongwang/Desktop/文件汇总/代码/git/MiniLzo_Mobile/MiniLzoDemo_android/minilzo/build/intermediates/ndkBuild/release/obj
+NDK_LIBS_OUT=/Users/xiaozhongwang/Desktop/文件汇总/代码/git/MiniLzo_Mobile/MiniLzoDemo_android/minilzo/build/intermediates/ndkBuild/release/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+

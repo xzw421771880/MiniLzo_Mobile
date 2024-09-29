@@ -86,8 +86,8 @@ jbyteArray compress(JNIEnv *env,jclass clazz,jbyteArray a){
     (*env)->SetByteArrayRegion(env, jArray, 0, length1, (jbyte*)out1);
 
     //释放内存
-    (*env)->ReleaseByteArrayElements(env,a, bytes, 0);
-    free(unsignedChars);
+//    (*env)->ReleaseByteArrayElements(env,a, bytes, 0);
+//    free(unsignedChars);
 
     return jArray;
 }
@@ -109,8 +109,8 @@ jbyteArray decompress(JNIEnv *env,jclass clazz,jbyteArray a){
     // 复制数据从cArray到jArray
     (*env)->SetByteArrayRegion(env, jArray, 0, length1, (jbyte*)in1);
     //释放内存
-    (*env)->ReleaseByteArrayElements(env,a, bytes, 0);
-    free(unsignedChars);
+//    (*env)->ReleaseByteArrayElements(env,a, bytes, 0);
+//    free(unsignedChars);
 
     return jArray;
 }
